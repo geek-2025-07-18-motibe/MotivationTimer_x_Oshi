@@ -37,4 +37,15 @@ class TimerLogController extends Controller
 
         return response()->json($timerLogs);
     }
+
+    public function remove(Request $request)
+{
+    // IDでレコードを検索。見つからなければ404エラーを返す
+    $timerLog = TimerLog::findOrFail($request->id);
+
+    // レコードが見つかった場合のみ、削除を実行
+    $timerLog->delete();
+
+    return response()->json(['message' => 'Timer log deleted successfully']);
+}
 }
