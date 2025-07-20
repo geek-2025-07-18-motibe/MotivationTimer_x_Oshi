@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => [env('APP_URL', 'http://localhost:3000'), 'http://localhost:5173'],
+    'allowed_origins' => [env('APP_URL', 'http://localhost:3000'), 'http://localhost:5173', 'https://motibe-devops-geek202507.github.io'],
 
     'allowed_origins_patterns' => [],
 
