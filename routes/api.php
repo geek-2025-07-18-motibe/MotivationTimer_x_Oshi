@@ -16,4 +16,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', [UserController::class, 'me']);
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy']);
     Route::post('/add-timer-log', [TimerLogController::class, 'store']);
+    Route::delete('/delete-timer-log', [TimerLogController::class, 'remove']);
 });
